@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Me Joindre</title>
+   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper" style="text-align: center;">
+        <a href="index.html" class="back-btn">← Retour au menu</a>
+        
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">Parlons de votre projet</h1>
+        <p style="color: var(--text-dim); margin-bottom: 50px;">Disponible pour des opportunités en alternance ou des collaborations techniques.</p>
+
+        <div class="contact-grid">
+            <a href="https://www.linkedin.com/in/mirande-cheubou-1bb406363/" target="_blank" class="contact-card">
+                <div class="contact-icon">in</div>
+                <h3>LinkedIn</h3>
+                <p>Mon profil professionnel</p>
+            </a>
+
+            <a href="https://github.com/MirandeCheubou" target="_blank" class="contact-card">
+                <div class="contact-icon">git</div>
+                <h3>GitHub</h3>
+                <p>Mes dépôts de code</p>
+            </a>
+
+            <a href="mailto:mirandepascale04@gmail.com" class="contact-card">
+                <div class="contact-icon">@</div>
+                <h3>Email</h3>
+                <p>M'envoyer un message</p>
+            </a>
+        </div>
+
+        <button class="copy-mail-btn" onclick="copyEmail()">
+            Cliquez pour copier mon adresse email
+        </button>
+        <p id="copy-status" style="margin-top: 10px; font-size: 0.8rem; color: #22c55e; display: none;">Copié dans le presse-papier !</p>
+    </div>
+
+    <script>
+        // Fonction pour copier l'email rapidement
+        function copyEmail() {
+            const email = "mirandepascale04@gmail.com"; 
+            navigator.clipboard.writeText(email);
+            const status = document.getElementById('copy-status');
+            status.style.display = "block";
+            setTimeout(() => { status.style.display = "none"; }, 2000);
+        }
+        </script>
+       <script src="cursor.js" defer></script>
+
+</body>
+</html>

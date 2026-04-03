@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À Propos | Parcours & Compétences</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <a href="index.html" class="back-btn">← Retour au menu</a>
+        <h1>À Propos de moi</h1>
+
+        <section class="card">
+            <h2>Expériences & Réalisations</h2>
+            <div style="border-left: 2px solid #334155; padding-left: 25px; margin-left: 10px;">
+                <div class="exp-item" style="margin-bottom: 25px;">
+                    <span style="font-size: 0.85rem; color: var(--text-dim);">2024 • Projet Personnel</span>
+                    <h3 style="color: var(--accent);">Développeur Full-Stack (Site Dynamique)</h3>
+                    <p>Conception d'une application web interactive avec gestion de base de données. Focus sur l'expérience utilisateur et l'architecture client-serveur.</p>
+                </div>
+                <div class="exp-item">
+                    <span style="font-size: 0.85rem; color: var(--text-dim);">2025 - Présent • BTS SIO</span>
+                    <h3 style="color: var(--text);">Étudiant en Informatique</h3>
+                    <p>Approfondissement du cycle de vie logiciel, de la cybersécurité et de la maintenance d'infrastructures réseaux.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🛠️ Compétences Techniques</h2>
+            <div class="grid">
+                <div class="skill-card">
+                    <h3>Développement Web</h3>
+                    <p>HTML5, CSS3, JavaScript, PHP</p>
+                    <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                    <div class="skill-details">
+                        Capacité à créer des interfaces dynamiques et responsives. Maîtrise du backend avec PHP/MySQL pour la gestion de bases de données.
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Réseau & Infrastructure</h3>
+                    <p>Active Directory, Windows Server, Cisco</p>
+                    <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                    <div class="skill-details">
+                        Gestion des utilisateurs et des groupes via <strong>Active Directory</strong>. Configuration de services réseaux (DNS, DHCP).
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Systèmes & Cloud</h3>
+                    <p>Linux, VMware, Docker</p>
+                    <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                    <div class="skill-details">
+                        Installation de serveurs Debian/Ubuntu. Mise en place d'environnements virtualisés.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2> Vers l'Intelligence Artificielle</h2>
+            <div class="ia-focus">
+                <h3> Futur Ingénieur IA <span class="tag-ia">Objectif 2027</span></h3>
+                <p>Passionné par les capacités d'automatisation, j'ambitionne de me spécialiser dans l'<strong>IA</strong> après mon BTS pour travailler sur le Machine Learning et le NLP.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2> Soft Skills</h2>
+            <div class="soft-skills-container">
+                <div class="soft-skill-tag">Curiosité technologique</div>
+                <div class="soft-skill-tag">Esprit d'équipe</div>
+                <div class="soft-skill-tag">Autonomie</div>
+                <div class="soft-skill-tag">Résolution de problèmes</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Fonction pour afficher/cacher les détails des compétences
+        function toggleDetails(btn) {
+            const details = btn.nextElementSibling;
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                btn.innerText = "Voir détails";
+            } else {
+                details.style.display = "block";
+                btn.innerText = "Fermer";
+            }
+        }
+    </script>
+       <script src="cursor.js" defer></script>
+
+</body>
+</html>

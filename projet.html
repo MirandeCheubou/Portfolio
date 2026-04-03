@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Projets | Portfolio</title>
+   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <a href="index.html" class="back-btn">← Retour au menu</a>
+        <h1>Mes Réalisations</h1>
+
+        <section class="card">
+            <h2>Tableau de Synthèse E4 / E5</h2>
+            <p style="margin-bottom: 20px; color: var(--text-dim);">Récapitulatif des compétences acquises lors des situations professionnelles.</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Compétences (Référentiel)</th>
+                            <th>Blog Archéo</th>
+                            <th>Portfolio AI</th>
+                            <th>Projet Réseau</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gérer le patrimoine informatique</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                        <tr>
+                            <td>Développer la présence en ligne</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Travailler en mode projet</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <h2> Portfolio de Projets</h2>
+        <div class="grid">
+            
+            <div class="skill-card"> <h3>Site Blog d'Archéologie</h3>
+                <p>Développement Full Stack - PHP/MySQL</p>
+                <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                <div class="skill-details">
+                    <p>Création d'une plateforme complète dédiée à l'archéologie :</p>
+                    <ul style="margin-left: 15px; margin-top: 10px;">
+                        <li><strong>Authentification :</strong> Système de login sécurisé pour les membres.</li>
+                        <li><strong>Filtrage :</strong> Tri des articles par catégories ou époques.</li>
+                        <li><strong>Formulaires :</strong> Inscription et contact avec validation des données.</li>
+                        <li><strong>Backend :</strong> CRUD complet pour gérer les articles de blog.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Portfolio Professionnel</h3>
+                <p>Design Moderne - JS / CSS Avancé</p>
+                <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                <div class="skill-details">
+                    <p>Conception d'un site vitrine dynamique pour mettre en valeur mon profil :</p>
+                    <ul style="margin-left: 15px; margin-top: 10px;">
+                        <li><strong>UX/UI :</strong> Navigation fluide avec Header flouté et curseur interactif.</li>
+                        <li><strong>Animations :</strong> Effets de transition CSS3 et lueur dynamique.</li>
+                        <li><strong>Architecture :</strong> Structure modulaire avec un fichier CSS global unique.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Infrastructure Active Directory</h3>
+                <p>Systèmes & Réseaux</p>
+                <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                <div class="skill-details">
+                    <p>Mise en place d'un environnement Windows Server :</p>
+                    <ul style="margin-left: 15px; margin-top: 10px;">
+                        <li>Configuration des rôles AD DS, DNS et DHCP.</li>
+                        <li>Gestion des Unités Organisationnelles (OU).</li>
+                        <li>Mise en place de GPO pour la sécurité des postes clients.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Fonction identique à la page À Propos pour la cohérence
+        function toggleDetails(btn) {
+            const details = btn.nextElementSibling;
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                btn.innerText = "Voir détails";
+            } else {
+                details.style.display = "block";
+                btn.innerText = "Fermer";
+            }
+        }
+        </script>
+       <script src="cursor.js" defer></script>
+
+</body>
+</html>

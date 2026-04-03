@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formation | Mes Diplômes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <a href="index.html" class="back-btn">← Retour au menu</a>
+        <h1>Formation & Diplômes</h1>
+
+        <section class="card">
+            <h2> Diplômes & Études</h2>
+            <div class="tree-node" style="border-left: 2px solid var(--accent); padding-left: 20px;">
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: var(--accent);">BTS SIO Option SLAM</h3>
+                    <p style="font-style: italic; color: var(--text-dim);">2025 - 2027 (En cours...)</p>
+                    <p>Actuellement en 1ère année. Apprentissage du développement d'applications, de la gestion de projets logiciels et de la cybersécurité.</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--text);">Baccalauréat Scientifique</h3>
+                    <p style="font-style: italic; color: var(--text-dim);">Obtenu en 2024</p>
+                    <p>Spécialités scientifiques. Base solide en logique et résolution de problèmes complexes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🥇 Certifications</h2>
+            <p style="margin-bottom: 20px; color: var(--text-dim);">Validation de compétences spécifiques par des organismes officiels.</p>
+            
+            <div class="grid">
+                <div class="skill-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <h3>MOOC RGPD</h3>
+                        <span style="background: var(--accent); color: var(--bg); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold;">CNIL</span>
+                    </div>
+                    <p>Protection des données personnelles</p>
+                    <button class="btn-details" onclick="toggleDetails(this)">En savoir plus</button>
+                    <div class="skill-details">
+                        <p>Formation suivie auprès de la <strong>CNIL</strong>. Cette certification atteste de ma compréhension des enjeux du Règlement Général sur la Protection des Données :</p>
+                        <ul style="margin-left: 15px; margin-top: 10px; font-size: 0.85rem;">
+                            <li>Les principes fondamentaux du RGPD.</li>
+                            <li>Les responsabilités du développeur dans la collecte de données.</li>
+                            <li>La sécurité et le respect de la vie privée des utilisateurs.</li>
+                        </ul>
+                        <p style="margin-top:10px; font-style: italic;">Note : C'est actuellement ma certification principale, d'autres sont en préparation (Pix, ANSSI).</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" style="border: 1px dashed var(--text-dim); opacity: 0.7;">
+                    <h3 style="color: var(--text-dim);">Prochaines étapes...</h3>
+                    <p>Certification Pix & MOOC ANSSI</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">Préparation en cours dans le cadre du BTS SIO.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Fonction pour afficher/cacher les détails 
+        function toggleDetails(btn) {
+            const details = btn.nextElementSibling;
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                btn.innerText = "En savoir plus";
+            } else {
+                details.style.display = "block";
+                btn.innerText = "Fermer";
+            }
+        }
+        </script>
+       <script src="cursor.js" defer></script>
+
+</body>
+</html>

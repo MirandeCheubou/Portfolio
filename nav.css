@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
+:root {
+    --bg: #020617;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --text: #f8fafc;
+    --text-dim: #64748b;
+    --nav-bg: rgba(2, 6, 23, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /*cursor: none; On cache le vrai curseur pour mettre le nôtre */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    /* MODIFICATIONS ICI */
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+    overflow-y: auto;   /* Autorise le scroll vertical sur toutes les pages */
+    min-height: 100vh;
+    cursor: none;
+}
+
+/* --- Curseur Personnalisé --- */
+#cursor {
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed; 
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+}
+
+#cursor-blur {
+    width: 200px;
+    height: 200px;
+    background: var(--accent-glow);
+    filter: blur(80px);
+    border-radius: 50%;
+     position: fixed; 
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Header Fixe --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20 20px;
+    position: relative;
+}
+
+.hero-title {
+    font-size: clamp(1rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.hero-title span {
+    color: var(--accent);
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    max-width: 550px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.8s;
+}
+
+.cta-container {
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.2s;
+}
+
+.cta {
+    padding: 15px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.cta:hover {
+    background: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* --- Animations --- */
+@keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* --- Adaptation pour les mobiles (plus de curseur) --- */
+@media (max-width: 768px) {
+    * { cursor: auto; }
+    #cursor, #cursor-blur { display: none; }
+}
