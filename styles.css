@@ -64,9 +64,14 @@ body {
 /* --- Style des Pages de Contenu --- */
 .content-wrapper {
     width: 90%;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
     max-width: 1000px;
-    padding: 40px 20px;
+      padding: 40px 20px;  
+     margin-top: 50px;
     animation: fadeIn 0.5s ease-out;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -142,7 +147,7 @@ th { color: var(--accent); }
     border-left: 4px solid #8b5cf6; 
     background: linear-gradient(90deg, rgba(139, 92, 246, 0.1) 0%, rgba(30, 41, 59, 0) 100%);
     padding: 25px;
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px 15px 15px 15px;
     margin-top: 20px;
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
@@ -185,15 +190,18 @@ th { color: var(--accent); }
 
 .skill-card {
     background: #0f172a;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     border: 1px solid #334155;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Laisse la carte grandir selon le texte */
 }
 
 .skill-card h3 {
-    color: var(--accent);
-    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.15rem;
 }
 
 .skill-details {
@@ -313,6 +321,62 @@ th { color: var(--accent); }
 .copy-mail-btn:hover {
     background: var(--accent);
     color: var(--bg);
+}
+
+footer {
+    background: rgba(15, 23, 42, 0.9);
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(56, 189, 248, 0.1); 
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.legal-mention {
+    font-size: 0.7rem;
+    color: #64748b; 
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Animations */
