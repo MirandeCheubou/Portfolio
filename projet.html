@@ -11,18 +11,23 @@
     <div id="cursor-blur"></div>
 
     <header>
-        <nav>
-            <a href="index.html" class="logo">PORTFOLIO</a>
-            <ul class="nav-links">
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="apropos.html">À Propos</a></li>
-                <li><a href="projet.html">Projets</a></li>
-                <li><a href="formation.html">Formation</a></li>
-                <li><a href="veille.html">Veille</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav>
+    <a href="index.html" class="logo">PORTFOLIO</a>
+
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="apropos.html">À Propos</a></li>
+      <li><a href="projet.html">Projets</a></li>
+      <li><a href="formation.html">Formation</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
     <div class="content-wrapper">
         <h1 style="margin: 15px;">Mes Réalisations</h1>
@@ -113,27 +118,28 @@
     </div>
 
     <footer>
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="index.html">Menu</a>
-            <a href="https://linkedin.com/in/mirande-cheubou" target="_blank">LinkedIn</a>
-            <a href="https://github.com/MirandeCheubou" target="_blank">GitHub</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div class="copyright">
-            © 2026 Mirande Cheubou | Étudiante BTS SIO SLAM
-        </div>
-
-        <div class="legal-mention">
-            <strong>Mentions légales :</strong> Ce site est un portfolio étudiant réalisé dans le cadre du BTS SIO. 
-            Hébergement : <strong>GitHub Inc.</strong> (88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA). 
-            Les contenus et projets présentés sont la propriété de l'auteur. Aucun cookie traceur n'est utilisé.
-        </div>
+  <div class="footer-content">
+    <p class="footer-name">Mirande Cheubou</p>
+    <p class="footer-sub">Étudiante BTS SIO SLAM · 2026</p>
+    <div class="footer-links">
+      <a href="index.html">Menu</a>
+      <span>·</span>
+      <a href="https://linkedin.com/in/mirande-cheubou" target="_blank">LinkedIn</a>
+      <span>·</span>
+      <a href="https://github.com/MirandeCheubou" target="_blank">GitHub</a>
+      <span>·</span>
+      <a href="contact.html">Contact</a>
+      <span>·</span>
+         <a href="mentions.html">Mentions légales</a>
     </div>
+    <p class="legal-mention">
+      Portfolio étudiant BTS SIO · Hébergé par GitHub Inc. · Aucun cookie traceur utilisé.
+    </p>
+  </div>
 </footer>
 
     <script>
+        // Fonction identique à la page À Propos pour la cohérence
         function toggleDetails(btn) {
             const details = btn.nextElementSibling;
             if (details.style.display === "block") {

@@ -22,3 +22,28 @@
                 cursor.style.background = '#38bdf8';
             });
         });
+            const burger = document.getElementById('burger');
+            const navLinks = document.getElementById('nav-links');
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('open');
+                navLinks.classList.toggle('open');
+            });
+            // Ferme le menu quand on clique sur un lien
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                burger.classList.remove('open');
+                navLinks.classList.remove('open');
+                });
+            });
+            const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });

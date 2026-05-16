@@ -324,51 +324,62 @@ th { color: var(--accent); }
 }
 
 footer {
-    background: rgba(15, 23, 42, 0.9);
-    padding: 40px 20px;
-    margin-top: 60px;
-    border-top: 1px solid rgba(56, 189, 248, 0.1); 
-    text-align: center;
-    width: 100%;
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+  padding: 30px 20px;
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.footer-sub {
+  font-size: 0.75rem;
+  color: var(--text-dim);
 }
 
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 6px 0;
 }
 
 .footer-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: 0.3s;
 }
 
-.footer-links a:hover {
-    color: #38bdf8;
-}
+.footer-links a:hover { opacity: 0.7; }
 
-.copyright {
-    color: #ffffff;
-    font-size: 0.85rem;
-    font-weight: 500;
+.footer-links span {
+  color: var(--text-dim);
+  font-size: 0.7rem;
 }
 
 .legal-mention {
-    font-size: 0.7rem;
-    color: #64748b; 
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  max-width: 500px;
+  line-height: 1.5;
 }
 
 /* Responsive pour mobile */
@@ -394,5 +405,158 @@ footer {
     .intro-text {
         text-align: center;
     }
+}
+/* ============================================
+   RESPONSIVE MOBILE — max-width: 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* --- Navigation --- */
+  nav {
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 8px 0;
+  }
+
+  /* --- Hero (index.html) --- */
+  .hero {
+    padding: 100px 20px 40px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+    letter-spacing: -1px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .cta-container {
+    margin-top: 30px;
+  }
+
+  /* --- Content wrapper (toutes les pages internes) --- */
+  .content-wrapper {
+    width: 95%;
+    padding: 20px 10px;
+    margin-top: 80px;
+  }
+
+  /* --- Cards --- */
+  .card {
+    padding: 20px 15px;
+  }
+
+  /* --- Intro (accueil.html) — photo + texte --- */
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-square {
+    width: 160px;
+    height: 160px;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Bouton CV */
+  .card > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* --- Grille de compétences / projets --- */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Veille : header article (titre + date) --- */
+  .card [style*="justify-content: space-between"] {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start !important;
+  }
+
+  /* --- Tableaux (projet.html) --- */
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+
+  /* --- Soft skills --- */
+  .soft-skills-container {
+    gap: 10px;
+  }
+
+  .soft-skill-tag {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  /* --- Contact grid --- */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Footer --- */
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* ============================================
+   TRÈS PETIT ÉCRAN — max-width: 400px
+   ============================================ */
+@media (max-width: 400px) {
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .profile-square {
+    width: 130px;
+    height: 130px;
+  }
+
+  .cta {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
 }
 

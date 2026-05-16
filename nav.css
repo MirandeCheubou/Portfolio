@@ -162,6 +162,64 @@ nav {
     box-shadow: 0 0 30px var(--accent-glow);
 }
 
+/* --- Burger button --- */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1100;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Burger animé quand ouvert */
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+
+  /* Affiche le burger */
+  .burger { display: flex; }
+
+  /* Cache les liens par défaut */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(2, 6, 23, 0.97);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    z-index: 1050;
+  }
+
+  /* Quand le menu est ouvert */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+}
+
 /* --- Animations --- */
 @keyframes reveal {
     to { opacity: 1; transform: translateY(0); }
