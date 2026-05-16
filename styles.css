@@ -382,11 +382,16 @@ footer {
   line-height: 1.5;
 }
 
-/* Responsive pour mobile */
 @media (max-width: 600px) {
     .footer-links {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;  
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .footer-links span {
+        display: none;         
     }
 }
 
@@ -396,40 +401,15 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Version mobile */
-@media (max-width: 768px) {
-    .intro-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .intro-text {
-        text-align: center;
-    }
-}
 /* ============================================
-   RESPONSIVE MOBILE — max-width: 768px
+   RESPONSIVE MOBILE — 768px
    ============================================ */
 @media (max-width: 768px) {
 
-  /* --- Navigation --- */
   nav {
     padding: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
   }
 
-  .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 0.7rem;
-    padding: 8px 0;
-  }
-
-  /* --- Hero (index.html) --- */
   .hero {
     padding: 100px 20px 40px;
     height: auto;
@@ -450,19 +430,16 @@ footer {
     margin-top: 30px;
   }
 
-  /* --- Content wrapper (toutes les pages internes) --- */
   .content-wrapper {
     width: 95%;
     padding: 20px 10px;
     margin-top: 80px;
   }
 
-  /* --- Cards --- */
   .card {
     padding: 20px 15px;
   }
 
-  /* --- Intro (accueil.html) — photo + texte --- */
   .intro-container {
     flex-direction: column;
     align-items: center;
@@ -483,25 +460,16 @@ footer {
     font-size: 1.4rem;
   }
 
-  /* Bouton CV */
-  .card > div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* --- Grille de compétences / projets --- */
   .grid {
     grid-template-columns: 1fr;
   }
 
-  /* --- Veille : header article (titre + date) --- */
   .card [style*="justify-content: space-between"] {
     flex-direction: column;
     gap: 8px;
     align-items: flex-start !important;
   }
 
-  /* --- Tableaux (projet.html) --- */
   table {
     font-size: 0.8rem;
   }
@@ -510,7 +478,6 @@ footer {
     padding: 8px 6px;
   }
 
-  /* --- Soft skills --- */
   .soft-skills-container {
     gap: 10px;
   }
@@ -520,30 +487,34 @@ footer {
     padding: 8px 14px;
   }
 
-  /* --- Contact grid --- */
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  /* --- Footer --- */
+  /* Footer — NE PAS toucher .footer-links ici */
+  /* C'est géré par le @media 600px ci-dessous */
+}
+
+/* ============================================
+   FOOTER MOBILE — 600px
+   ============================================ */
+@media (max-width: 600px) {
   .footer-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .footer-links span {
+    display: none;
   }
 }
 
 /* ============================================
-   TRÈS PETIT ÉCRAN — max-width: 400px
+   TRÈS PETIT ÉCRAN — 400px
    ============================================ */
 @media (max-width: 400px) {
-  .nav-links {
-    gap: 8px;
-  }
-
-  .nav-links a {
-    font-size: 0.65rem;
-  }
 
   .hero-title {
     font-size: 1.6rem;
@@ -559,4 +530,3 @@ footer {
     font-size: 0.8rem;
   }
 }
-
