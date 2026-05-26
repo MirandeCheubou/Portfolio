@@ -1,17 +1,17 @@
-# 🚀 Portfolio Professionnel | Mirande Cheubou
+# Portfolio Professionnel | Mirande Cheubou
 
 Bienvenue sur le dépôt de mon portfolio interactif. Ce projet a été conçu pour présenter mon parcours, mes compétences techniques en développement et réseau, ainsi que mes ambitions dans le domaine de l'**Intelligence Artificielle**.
 
-## 🌐 Aperçu du projet
+## Aperçu du projet
 Ce portfolio est une application web statique moderne, mettant l'accent sur une expérience utilisateur fluide (UX) et un design futuriste. 
 
-**Points clés :**
-- 🎨 Design "Dark Mode" avec accents néon.
-- 🖱️ Curseur interactif personnalisé et effets de lueur dynamique.
-- 📱 Entièrement Responsive (adapté aux mobiles et tablettes).
-- 📂 Organisation modulaire du CSS via des variables globales (`:root`).
+** Points clés :**
+-  Design "Dark Mode" avec accents néon.
+-  Curseur interactif personnalisé et effets de lueur dynamique.
+-  Entièrement Responsive (adapté aux mobiles et tablettes).
+-  Organisation modulaire du CSS via des variables globales (`:root`).
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 - **Frontend :** HTML5, CSS3 (Flexbox, Grid, Variables CSS).
 - **Interactivité :** JavaScript Vanilla (DOM Manipulation, Event Listeners).
 - **Outils :** Git, GitHub Pages pour l'hébergement.
