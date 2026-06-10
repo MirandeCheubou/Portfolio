@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Archéo Passion | Mirande Cheubou</title>
+  <meta name="description" content="Détail du projet Blog d'Archéologie — site Full Stack PHP/MySQL développé par Mirande Cheubou, BTS SIO SLAM.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="projet-archeo.css">
+</head>
+<body>
+  <div id="cursor"></div>
+  <div id="cursor-blur"></div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">PORTFOLIO</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="apropos.html">À Propos</a></li>
+        <li><a href="projet.html">Projets</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+
+    <a href="projet.html" class="back-link">← Retour aux projets</a>
+
+    <div class="project-hero">
+      <div>
+        <div class="hero-badge">Projet Full Stack · 2025</div>
+        <h1>Blog Archéo Passion</h1>
+        <p>Plateforme web complète dédiée à l'archéologie française. Site dynamique avec authentification, gestion des actualités, panneau d'administration et mode jour/nuit.</p>
+        <div class="tag-row">
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">PHP</span>
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">MySQL</span>
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">JavaScript</span>
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">HTML5 / CSS3</span>
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">Bootstrap</span>
+          <span class="tag" style="color:#C9A84C;border-color:rgba(201,168,76,.3)">PDO</span>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/MirandeCheubou/Archeo-IT" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Voir sur GitHub</a>
+          <a href="projet.html" class="hero-btn hero-btn-outline">← Retour</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num">8</div>
+        <div class="stat-lbl">Pages PHP</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Tables MySQL</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">2</div>
+        <div class="stat-lbl">Niveaux d'accès</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">☀/☾</div>
+        <div class="stat-lbl">Modes Jour/Nuit</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <p class="section-eyebrow">Aperçu visuel</p>
+      <h2>Captures du site</h2>
+      <p style="color:var(--text-dim);margin-bottom:28px;">Voici à quoi ressemble chaque page principale du site Archéo Passion.</p>
+
+      <div class="mockup-grid">
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Page d'accueil</h3>
+            <p>Présentation, actualités dynamiques depuis la BDD et carrousel d'images archéologiques.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/index.php</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-accueil">
+                <div class="sc-header">
+                  <span class="sc-logo">ARCHÉO PASSION</span>
+                  <div class="sc-nav">
+                    <span>Accueil</span><span>Activités</span><span>Contact</span>
+                  </div>
+                </div>
+                <div class="sc-banner">
+                  <div class="sc-banner-title">Association Archéo Passion</div>
+                  <div class="sc-banner-sub">À la découverte du passé</div>
+                  <div class="sc-banner-img"></div>
+                </div>
+                <div class="sc-gold-line"></div>
+                <div class="sc-main">
+                  <div class="sc-welcome">
+                    <div class="sc-welcome-title">Bienvenue sur notre site</div>
+                    <div class="sc-welcome-text">Bienvenue sur ARCHEO-IT, le site qui mêle passion de l'archéologie et nouvelles technologies. Explorez les lieux emblématiques...</div>
+                  </div>
+                  <div style="font-family:'Cinzel',serif;font-size:.52rem;color:#8B6914;margin-bottom:5px;">Actualités</div>
+                  <div class="sc-cards-row">
+                    <div class="sc-mini-card">
+                      <div class="sc-mini-img"></div>
+                      <div class="sc-mini-txt">
+                        <div class="sc-mini-title">Découverte à Lyon</div>
+                        <div class="sc-mini-body">Vestiges gallo-romains...</div>
+                      </div>
+                    </div>
+                    <div class="sc-mini-card">
+                      <div class="sc-mini-img" style="background:linear-gradient(135deg,#4a3010,#7a5830);"></div>
+                      <div class="sc-mini-txt">
+                        <div class="sc-mini-title">Fouilles Normandie</div>
+                        <div class="sc-mini-body">Dragon XIIe siècle...</div>
+                      </div>
+                    </div>
+                    <div class="sc-mini-card">
+                      <div class="sc-mini-img" style="background:linear-gradient(135deg,#5C3D1E,#8B6020);"></div>
+                      <div class="sc-mini-txt">
+                        <div class="sc-mini-title">Paris médiéval</div>
+                        <div class="sc-mini-body">Forum de Lutèce...</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Page Activités</h3>
+            <p>Grille de 6 articles avec images, descriptions et liens vers des sources archéologiques réelles.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/activites.php</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-activites">
+                <div class="sc-header">
+                  <span class="sc-logo">ARCHÉO PASSION</span>
+                  <div class="sc-nav">
+                    <span>Accueil</span><span style="color:#C9A84C;">Activités</span><span>Contact</span>
+                  </div>
+                </div>
+                <div class="sc-gold-line"></div>
+                <div class="sc-sommaire">
+                  <div class="sc-sommaire-title">À la découverte des trésors enfouis de la France</div>
+                  <div class="sc-sommaire-text">Les fouilles archéologiques en France révèlent un patrimoine exceptionnel, allant de la préhistoire aux vestiges gallo-romains...</div>
+                </div>
+                <div class="sc-act-grid">
+                  <div class="sc-act-card">
+                    <div class="sc-act-img sc-act-img-1"></div>
+                    <div class="sc-act-txt">
+                      <div class="sc-act-title">Visites de sites</div>
+                      <div class="sc-act-body">Explorez le passé, révélez l'Histoire...</div>
+                      <div class="sc-act-date">le 20.06.2025</div>
+                    </div>
+                  </div>
+                  <div class="sc-act-card">
+                    <div class="sc-act-img sc-act-img-2"></div>
+                    <div class="sc-act-txt">
+                      <div class="sc-act-title">Conférences</div>
+                      <div class="sc-act-body">Un passé enfoui, une richesse retrouvée...</div>
+                      <div class="sc-act-date">le 19.06.2025</div>
+                    </div>
+                  </div>
+                  <div class="sc-act-card">
+                    <div class="sc-act-img sc-act-img-3"></div>
+                    <div class="sc-act-txt">
+                      <div class="sc-act-title">Fouilles terrain</div>
+                      <div class="sc-act-body">Creuser, c'est découvrir...</div>
+                      <div class="sc-act-date">le 19.08.2022</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Page Connexion</h3>
+            <p>Authentification sécurisée avec hachage <code style="color:var(--accent);font-size:.78rem">password_hash()</code>. Accès restreint aux articles complets.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/connexion.php</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-connexion">
+                <div class="sc-header">
+                  <span class="sc-logo">ARCHÉO PASSION</span>
+                  <div class="sc-nav"><span>Accueil</span><span>Contact</span></div>
+                </div>
+                <div class="sc-gold-line"></div>
+                <div style="font-family:'Cinzel',serif;font-size:.6rem;color:#8B6914;text-align:center;padding:7px 0 3px;">Se connecter</div>
+                <div class="sc-conn-body">
+                  <div class="sc-conn-wrap">
+                    <div class="sc-conn-form">
+                      <div class="sc-conn-title">Connexion</div>
+                      <div class="sc-field">
+                        <label>Email</label>
+                        <div class="sc-field-input"></div>
+                      </div>
+                      <div class="sc-field">
+                        <label>Mot de passe</label>
+                        <div class="sc-field-input"></div>
+                      </div>
+                      <div class="sc-conn-btn"><span>CONNEXION</span></div>
+                      <div style="font-size:.35rem;color:#8B6914;margin-top:5px;">Pas de compte ? Créer un compte</div>
+                    </div>
+                    <div class="sc-conn-slogan">
+                      <div class="sc-slogan-title">Portail Archéo-IT</div>
+                      <div class="sc-slogan-text">Accédez à votre espace personnel pour explorer les dernières découvertes et consulter les archives...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Panneau d'administration</h3>
+            <p>Interface réservée à l'admin pour gérer les messages de contact, les inscriptions et les actualités.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/administration.php</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-admin">
+                <div class="sc-header">
+                  <span class="sc-logo">ARCHÉO PASSION</span>
+                  <div class="sc-nav"><span>Accueil</span><span style="color:#C9A84C">Admin</span></div>
+                </div>
+                <div class="sc-gold-line"></div>
+                <div class="sc-admin-title">Table de données — Formulaires de contact</div>
+                <div class="sc-table">
+                  <div class="sc-table-head">
+                    <div class="sc-th">Nom</div>
+                    <div class="sc-th">Prénom</div>
+                    <div class="sc-th">Email</div>
+                    <div class="sc-th">Demande</div>
+                    <div class="sc-th">Commentaire</div>
+                    <div class="sc-th">Action</div>
+                  </div>
+                  <div class="sc-table-row">
+                    <div class="sc-td">Martin</div>
+                    <div class="sc-td">Sophie</div>
+                    <div class="sc-td">sophie@mail.fr</div>
+                    <div class="sc-td">Info</div>
+                    <div class="sc-td">Quand fouilles?</div>
+                    <div class="sc-td"><span class="sc-del">Suppr.</span></div>
+                  </div>
+                  <div class="sc-table-row">
+                    <div class="sc-td">Dupont</div>
+                    <div class="sc-td">Paul</div>
+                    <div class="sc-td">paul@mail.fr</div>
+                    <div class="sc-td">RDV</div>
+                    <div class="sc-td">Visite site</div>
+                    <div class="sc-td"><span class="sc-del">Suppr.</span></div>
+                  </div>
+                  <div class="sc-table-row">
+                    <div class="sc-td">Bernard</div>
+                    <div class="sc-td">Clara</div>
+                    <div class="sc-td">clara@mail.fr</div>
+                    <div class="sc-td">Autre</div>
+                    <div class="sc-td">Bénévolat</div>
+                    <div class="sc-td"><span class="sc-del">Suppr.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Page À propos</h3>
+            <p>Présentation de l'association, valeurs et équipe. Mise en page en grille avec bordures dorées.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/apropos.php</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-apropos">
+                <div class="sc-header" style="margin:-8px -10px 8px;padding:10px 14px;">
+                  <span class="sc-logo">ARCHÉO PASSION</span>
+                  <div class="sc-nav"><span>Accueil</span><span style="color:#C9A84C;">À propos</span></div>
+                </div>
+                <div class="sc-ap-h2">Qui sommes-nous ?</div>
+                <div class="sc-ap-intro">
+                  <div class="sc-ap-text">Fondée par des passionnés, <strong>Archéo Passion</strong> a pour mission de faire découvrir l'archéologie à tous. Nous organisons des fouilles, ateliers, conférences et visites guidées dans toute la région.</div>
+                </div>
+                <div class="sc-ap-h2" style="font-size:.55rem;margin-bottom:5px;">Nos valeurs</div>
+                <div class="sc-val-row">
+                  <div class="sc-val">
+                    <div class="sc-val-title">Partage</div>
+                    <div class="sc-val-text">Rendre l'archéologie accessible à tous.</div>
+                  </div>
+                  <div class="sc-val">
+                    <div class="sc-val-title">Respect</div>
+                    <div class="sc-val-text">Respecter les sites et cultures du passé.</div>
+                  </div>
+                  <div class="sc-val">
+                    <div class="sc-val-title">Passion</div>
+                    <div class="sc-val-text">Transmettre l'amour de l'histoire.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-wrap">
+          <div class="mockup-caption">
+            <h3>Mode nuit </h3>
+            <p>Toggle jour/nuit persistant via localStorage. Palette encre & or pour une lecture nocturne confortable.</p>
+          </div>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot bd-red"></div>
+                <div class="browser-dot bd-yellow"></div>
+                <div class="browser-dot bd-green"></div>
+              </div>
+              <div class="browser-url">localhost/php/index.php — mode nuit</div>
+            </div>
+            <div class="browser-screen">
+              <div class="screen-night">
+                <div class="sc-night-header">
+                  <span class="sc-night-logo">ARCHÉO PASSION</span>
+                  <div class="sc-night-nav">
+                    <span>Accueil</span><span>Activités</span><span>Contact</span>
+                  </div>
+                  <div class="sc-night-btn">☀ Jour</div>
+                </div>
+                <div style="height:2px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);"></div>
+                <div class="sc-night-main">
+                  <div class="sc-night-card">
+                    <div class="sc-night-title">Bienvenue sur Archéo-IT</div>
+                    <div class="sc-night-text">Le site qui mêle passion de l'archéologie et nouvelles technologies. Explorez les lieux emblématiques...</div>
+                  </div>
+                  <div style="font-family:'Cinzel',serif;font-size:.5rem;color:#C9A84C;margin-bottom:5px;">Actualités</div>
+                  <div class="sc-night-cards">
+                    <div class="sc-night-mini">
+                      <div class="sc-night-img sc-night-img-1"></div>
+                      <div class="sc-night-mini-txt">
+                        <div class="sc-night-mini-t">Lyon antique</div>
+                        <div class="sc-night-mini-p">Lugdunum dévoilé...</div>
+                      </div>
+                    </div>
+                    <div class="sc-night-mini">
+                      <div class="sc-night-img sc-night-img-2"></div>
+                      <div class="sc-night-mini-txt">
+                        <div class="sc-night-mini-t">Normandie</div>
+                        <div class="sc-night-mini-p">Dragon XIIe s.</div>
+                      </div>
+                    </div>
+                    <div class="sc-night-mini">
+                      <div class="sc-night-img sc-night-img-3"></div>
+                      <div class="sc-night-mini-txt">
+                        <div class="sc-night-mini-t">Paris médiev.</div>
+                        <div class="sc-night-mini-p">Forum Lutèce...</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sc-footer-night">
+                  <span class="sc-foot-text">Copyright © 2025-2026</span>
+                  <div class="sc-foot-icons">
+                    <div class="sc-foot-dot"></div>
+                    <div class="sc-foot-dot"></div>
+                    <div class="sc-foot-dot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-eyebrow">Développement</p>
+      <h2>Fonctionnalités clés</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>Authentification sécurisée</h4>
+          <p>Inscription avec génération de mot de passe via script Python, hachage <code style="color:var(--accent)">password_hash()</code>, vérification par <code style="color:var(--accent)">password_verify()</code> et gestion de session.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Base de données MySQL</h4>
+          <p>3 tables reliées : <code style="color:var(--accent)">formulaire</code>, <code style="color:var(--accent)">inscription</code>, <code style="color:var(--accent)">actualités</code>. Accès via PDO avec requêtes sécurisées.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Actualités dynamiques</h4>
+          <p>Les articles sont stockés en BDD. Un utilisateur non connecté voit 3 articles. L'accès complet est réservé aux membres inscrits.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Panel administration</h4>
+          <p>Interface admin avec 3 tableaux de données (contacts, inscriptions, actualités). Suppression des entrées en un clic via formulaires POST.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Mode jour / nuit</h4>
+          <p>Toggle CSS via classe <code style="color:var(--accent)">.night</code> sur le body. Préférence mémorisée en localStorage entre les pages.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Design responsive</h4>
+          <p>Mise en page adaptée mobile/tablette/desktop via CSS Grid, Flexbox et media queries. Thème archéologique cohérent avec police Cinzel et palette parchemin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-eyebrow">Technologies</p>
+      <h2>Stack technique</h2>
+      <div class="stack-row">
+        <span class="stack-pill">PHP 8</span>
+        <span class="stack-pill">MySQL</span>
+        <span class="stack-pill">HTML</span>
+        <span class="stack-pill">CSS</span>
+        <span class="stack-pill">JavaScript</span>
+        <span class="stack-pill">Bootstrap 5</span>
+        <span class="stack-pill">Python (script MDP)</span>
+        <span class="stack-pill">Git / GitHub</span>
+        <span class="stack-pill">Laragon</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-eyebrow">Référentiel BTS SIO</p>
+      <h2>Compétences mobilisées</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <h4>A1.3 — Développer la présence en ligne</h4>
+          <p>Conception et déploiement d'un site web complet, accessible au public, avec gestion de contenu dynamique.</p>
+        </div>
+        <div class="tl-item">
+          <h4>A2.1 — Concevoir et développer une solution applicative</h4>
+          <p>Architecture MVC partielle, séparation header/footer/pages, gestion complète du cycle CRUD.</p>
+        </div>
+        <div class="tl-item">
+          <h4>A2.3 — Gérer les données</h4>
+          <p>Modélisation d'une base MySQL avec 3 tables, requêtes SQL, jointures et gestion des droits d'accès par session.</p>
+        </div>
+        <div class="tl-item">
+          <h4>A3.1 — Protéger les données à caractère personnel</h4>
+          <p>Hachage des mots de passe, protection contre les injections SQL via requêtes préparées PDO, session sécurisée.</p>
+        </div>
+        <div class="tl-item">
+          <h4>A1.4 — Travailler en mode projet</h4>
+          <p>Versionnage sur GitHub, organisation des fichiers, développement itératif des fonctionnalités.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-name">Mirande Cheubou</p>
+      <p class="footer-sub">Étudiante BTS SIO SLAM · 2026</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mirande-cheubou-1bb406363/" target="_blank">LinkedIn</a>
+        <span>·</span>
+        <a href="https://github.com/MirandeCheubou" target="_blank">GitHub</a>
+        <span>·</span>
+        <a href="contact.html">Contact</a>
+        <span>·</span>
+        <a href="mentions.html">Mentions légales</a>
+      </div>
+      <p class="legal-mention">Portfolio étudiant BTS SIO · Hébergé par GitHub Inc. · Aucun cookie traceur utilisé.</p>
+    </div>
+  </footer>
+
+  <script src="cursor.js" defer></script>
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          const siblings = [...e.target.parentElement.children];
+          const idx = siblings.indexOf(e.target);
+          setTimeout(() => e.target.classList.add('visible'), idx * 100);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.mockup-wrap, .feature-item, .tl-item').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

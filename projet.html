@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets | Portfolio</title>
+    <title>Mes Projets | Portfolio — Mirande Cheubou</title>
+    <meta name="description" content="Réalisations de Mirande Cheubou : blog archéologie PHP/MySQL, portfolio JS, infrastructure Active Directory. Tableau de synthèse E4/E5.">
+    <meta property="og:title" content="Mes Projets | Mirande Cheubou">
+    <meta property="og:description" content="Réalisations et tableau de compétences E4/E5 de Mirande Cheubou, BTS SIO SLAM.">
+    <meta property="og:type" content="website">
    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
 </head>
@@ -35,32 +39,86 @@
 
         <section class="card">
             <h2>Tableau de Synthèse E4 / E5</h2>
-            <p style="margin-bottom: 20px; color: var(--text-dim);">Récapitulatif des compétences acquises lors des situations professionnelles.</p>
+            <p style="margin-bottom: 20px; color: var(--text-dim);">Récapitulatif des compétences du référentiel BTS SIO acquises lors des situations professionnelles significatives.</p>
             <div style="overflow-x: auto;">
                 <table>
                     <thead>
                         <tr>
-                            <th>Compétences (Référentiel)</th>
+                            <th>Compétences (Référentiel BTS SIO)</th>
                             <th>Blog Archéo</th>
-                            <th>Portfolio AI</th>
+                            <th>Portfolio</th>
                             <th>Projet Réseau</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Gérer le patrimoine informatique</td>
+                            <td><strong>A1.1</strong> — Gérer le patrimoine informatique</td>
                             <td style="color: var(--success);">✔</td>
                             <td style="color: var(--success);">✔</td>
                             <td style="color: var(--success);">✔</td>
                         </tr>
                         <tr>
-                            <td>Développer la présence en ligne</td>
+                            <td><strong>A1.2</strong> — Répondre aux incidents et demandes d'assistance</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A1.3</strong> — Développer la présence en ligne de l'organisation</td>
                             <td style="color: var(--success);">✔</td>
                             <td style="color: var(--success);">✔</td>
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>Travailler en mode projet</td>
+                            <td><strong>A1.4</strong> — Travailler en mode projet</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A1.5</strong> — Mettre à disposition des utilisateurs un service informatique</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A1.6</strong> — Organiser son développement professionnel</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A2.1</strong> — Concevoir et développer une solution applicative</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A2.2</strong> — Assurer la maintenance corrective ou évolutive</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A2.3</strong> — Gérer les données</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A3.1</strong> — Protéger les données à caractère personnel</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A3.2</strong> — Préserver l'identité numérique de l'organisation</td>
+                            <td>-</td>
+                            <td style="color: var(--success);">✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A3.3</strong> — Sécuriser les équipements et les usages</td>
                             <td style="color: var(--success);">✔</td>
                             <td>-</td>
                             <td style="color: var(--success);">✔</td>
@@ -68,21 +126,27 @@
                     </tbody>
                 </table>
             </div>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: var(--text-dim);">✔ = compétence mobilisée &nbsp;·&nbsp; - = non concerné par ce projet</p>
         </section>
 
         <h2> Portfolio de Projets</h2>
         <div class="grid">
             
-            <div class="skill-card"> <h3>Site Blog d'Archéologie</h3>
+            <div class="skill-card">
+                <h3>Site Blog d'Archéologie</h3>
                 <p>Développement Full Stack - PHP/MySQL</p>
-                <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                    <button class="btn-details" onclick="toggleDetails(this)">Voir détails</button>
+                    <a href="projet-archeo.html" class="btn-details" style="text-decoration:none; text-align:center;">Captures & démo</a>
+                </div>
                 <div class="skill-details">
                     <p>Création d'une plateforme complète dédiée à l'archéologie :</p>
                     <ul style="margin-left: 15px; margin-top: 10px;">
-                        <li><strong>Authentification :</strong> Système de login sécurisé pour les membres.</li>
-                        <li><strong>Filtrage :</strong> Tri des articles par catégories ou époques.</li>
-                        <li><strong>Formulaires :</strong> Inscription et contact avec validation des données.</li>
-                        <li><strong>Backend :</strong> CRUD complet pour gérer les articles de blog.</li>
+                        <li><strong>Authentification :</strong> Système de login sécurisé avec hachage PDO.</li>
+                        <li><strong>Actualités dynamiques :</strong> Accès restreint selon le statut de connexion.</li>
+                        <li><strong>Formulaires :</strong> Contact et inscription avec validation des données.</li>
+                        <li><strong>Admin :</strong> Panneau de gestion des données (contacts, users, articles).</li>
+                        <li><strong>Mode jour/nuit :</strong> Toggle CSS persistant via localStorage.</li>
                     </ul>
                 </div>
             </div>
@@ -137,7 +201,6 @@
   </div>
 </footer>
     <script>
-        // Fonction identique à la page À Propos pour la cohérence
         function toggleDetails(btn) {
             const details = btn.nextElementSibling;
             if (details.style.display === "block") {
